@@ -1,0 +1,20 @@
+<%= form_with(model: wine, local: true) do |form| %>
+  
+  <h1>新規登録</h1>
+  <div class="field">
+    <%= form.label :wine_name %>
+    <%= form.text_field :wine_name, id: :wine_wine_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :wine_description %>
+  </div>
+
+  <h4>画像</h4>
+    <%= form.attachment_field :image %>
+    
+  <div class="actions">
+    <%= form.submit class: "btn" %>
+  </div>
+<% end %>

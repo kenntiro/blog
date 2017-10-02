@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Wine name:</strong>
+  <%= @wine.wine_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wine.description %>
+</p>
+
+<p>
+	<%= attachment_image_tag @wine, :image, :fill, 300, 300, format: "jpeg" %>
+</p>
+
+<% if current_user.id == @wine.user_id %>		
+	<%= link_to 'Edit', edit_wine_path(@wine) %> |
+	<%= link_to 'Destroy', @wine, method: :delete, data: {confirm: "消すん？"} %>|
+<% end %>
+	<%= link_to 'Back', wines_path %>|

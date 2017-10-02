@@ -1,0 +1,31 @@
+<h1>記録帳</h1>
+
+<p id="notice"><%= notice %></p>
+
+<table class="table table-condensed">
+  <thead>
+    <tr class="success">
+      <th>Wine name</th>
+     
+      <th>Description</th>
+      <th colspan="3"></th>
+
+      <th>画像</th>
+      <%= attachment_image_tag @wine, :image, :fill, 100, 100, format: 'jpeg' %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wines.each do |wine| %>
+      <tr>
+        <td><%= link_to wine.wine_name, wine_path(wine) %></td>
+        <td><%= wine.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @wines %>
+
+
+<br>
+<%= render 'form', wine: @wine %>

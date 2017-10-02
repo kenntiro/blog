@@ -1,0 +1,105 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+//initialization
+h1,h2,h3,p,div,html,body{
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+
+#header{
+	background-color: #red;
+}
+
+
+html,body,.row,.container{
+	height:100%;
+}
+
+//home#top
+.top-wrapper{
+	position:fixed;
+	background-image:url('top.jpg');
+	background-size:cover;
+	width:100%;
+	height:100%;
+}
+.top-message{
+	border-radius:50px;
+	background-color:rgba(0,0,0,0.5);
+	width:40%;
+	height:30%;
+	margin:0 auto;
+	margin-top:200px;
+	padding:50px 10px;
+	text-align:center;
+	color:white;
+	p{
+		margin-top:10px;
+	}
+	a{
+		background-color:rgba(255,255,255,0.9);
+		border-radius:5px;
+		padding:5px;
+	}
+	strong{
+		font-style:oblique;
+	}
+}
+
+//books
+.background{
+	position:fixed;
+	background-image:url('background.jpg');
+	background-size:cover;
+	width:100%;
+	height:100%;
+}
+
+.sub-column{
+	margin-top:5%;
+	height:90%;
+	color:white;
+
+	//books index
+	.up-sub{
+		padding:13%;
+		border-radius:50px;
+		background-color:rgba(0,0,0,0.5);	
+		height:40%;
+		a{
+			color:white;
+		}
+	}
+	.under-sub{
+		padding:15%;
+		margin-top:20%;
+		border-radius:50px;
+		background-color:rgba(0,0,0,0.5);
+		height:50%;
+	}
+}
+
+.main-column{
+	margin-top:5%;
+	padding:5%;
+	border-radius:50px;
+	background-color:rgba(0,0,0,0.5);
+	height:90%;
+	color:white;
+	a{
+		color:white;
+	}
+	td:hover{
+		a{
+			color:black;
+		}
+	}
+}
+
+//form内の文字色を黒にしておくため
+.black{
+	color:black;
+}
